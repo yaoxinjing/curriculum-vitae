@@ -23,18 +23,18 @@
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{lightgray}{HTML}{999999}
 
-\definecolor{green}{HTML}{C2E15F}
+% \definecolor{green}{HTML}{C2E15F}
 \definecolor{orange}{HTML}{FDA333}
-\definecolor{purple}{HTML}{D3A4F9}
-\definecolor{red}{HTML}{FB4485}
-\definecolor{blue}{HTML}{6CE0F1}
+% \definecolor{purple}{HTML}{D3A4F9}
+% \definecolor{red}{HTML}{FB4485}
+% \definecolor{blue}{HTML}{6CE0F1}
 
 \ifdefined\@cv@print
-  \colorlet{green}{gray}
+  % \colorlet{green}{gray}
   \colorlet{orange}{gray}
-  \colorlet{purple}{gray}
-  \colorlet{red}{gray}
-  \colorlet{blue}{gray}
+  % \colorlet{purple}{gray}
+  % \colorlet{red}{gray}
+  % \colorlet{blue}{gray}
   \colorlet{fillheader}{white}
   \colorlet{header}{gray}
 \else
@@ -121,27 +121,28 @@ Path=fonts/
 %%%%%%%%%%%%%
 \RequirePackage{parskip}
 
-\newcounter{colorCounter}
-\def\@sectioncolor#1#2#3{%
-  {%
-    \color{%
-      \ifcase\value{colorCounter}%
-        orange\or%
-        orange\or%
-        orange\or%
-        orange\or%
-        orange\or%
-        headercolor\fi%
-    } #1#2#3%
-  }%
-  \stepcounter{colorCounter}%
-}
+% \newcounter{colorCounter}
+% \def\@sectioncolor#1#2#3{%
+%   {%
+%     \color{%
+%       \ifcase\value{colorCounter}%
+%         orange\or%
+%         orange\or%
+%         orange\or%
+%         orange\or%
+%         orange\or%
+%         headercolor\fi%
+%     } #1#2#3%
+%   }%
+%   \stepcounter{colorCounter}%
+% }
 
 \renewcommand{\section}[1]{
   \par\vspace{\parskip}
   {%
     \LARGE\headingfont\color{headercolor}%
-    \@sectioncolor #1%
+    % \@sectioncolor
+    \color{orange}{#1}%
   }
   \par\vspace{\parskip}
 }
@@ -172,7 +173,7 @@ Path=fonts/
   % \multirow{2}{2cm}{#1}
   #1
   &
-  \parbox[t]{11.2cm}{%
+  \parbox[t]{11cm}{%
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
@@ -190,14 +191,16 @@ Path=fonts/
 \newenvironment{aside}{%
   \let\oldsection\section
   \renewcommand{\section}[1]{
-    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
+    \par
+    % \vspace{\baselineskip}
+    {\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{4.6}(1.5, 4.66)
-  \begin{flushright}
+  \begin{textblock}{4.6}(1.5, 4.9)
+  % \begin{flushright}
   \obeycr
 }{%
   \restorecr
-  \end{flushright}
+  % \end{flushright}
   \end{textblock}
   \let\section\oldsection
 }
@@ -206,7 +209,7 @@ Path=fonts/
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.6cm,top=2cm,right=1.5cm,bottom=0.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=7cm,top=2cm,right=1.5cm,bottom=0.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
 
 %%%%%%%%%%%%%%%%
