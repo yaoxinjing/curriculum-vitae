@@ -1,0 +1,160 @@
+% Personal Modifications of https://www.sharelatex.com/templates/cv-or-resume/fancy-cv
+
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cv}
+% \addbibresource{bibliography.bib}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage[width=\textwidth,heightr=1,subdivisions=3,filledcolor=orange,emptycolor=black!10]{progressbar}
+\usepackage{multirow}
+
+\newcommand{\monthandyear}{\the\month/\the\year}
+
+\begin{document}
+\header{Jan-Philipp~}{Willem}
+       {Software-Engineer}
+
+
+% In the aside, each new line forces a line break
+\begin{aside}
+\includegraphics[width=\textwidth]{avatar.png}
+  \section{Kontakt}
+    Philosophengarten 1
+    76829 Landau
+    ~
+    \href{tel:+4915117749394}{0151 17749394}
+    \href{mailto:info@jwillem.de}{info@jwillem.de}
+    \href{http://jwillem.de}{www.jwillem.de}
+    \href{http://github.com/jwillem}{github.com/jwillem}
+  \section{Sprachen}
+    Deutsch {\footnotesize{(Muttersprache)}}
+    Englisch {\footnotesize{(fließend)}}
+    Französisch {\footnotesize{(Grundlagen)}}
+    ~
+    {\footnotesize Java-Script (ES6) · CSS3 · HTML5}
+    \progressbar{1}
+    {\footnotesize Clojure · Elixir · Elm · \LaTeX}
+    \progressbar{0.669}
+    {\footnotesize Haskell · Ruby · C++ · Java · PHP}
+    \progressbar{0.339}
+  \section{Interessen}
+  funktionale Programmierung
+  reaktive Frontends
+  Architektur · API-Design
+  Clean-Code · TDD
+  Deployment · CI/CD
+  Git · Vim · Bash
+  \section{OS-Präferenz}
+  Linux {\footnotesize{(+++)}}
+  Osx {\footnotesize{(++)}}
+  Windows {\footnotesize{(+)}}
+  \section{Hobbies}
+    englische Romane
+    Musikproduktion
+    {\footnotesize Ableton Live
+    Propellerheads Reason
+    Schlagzeug · Percussion
+    Klavier · Bass · Gitarre}
+\end{aside}
+
+\section{Ausbildung}
+
+\begin{entrylist}
+  \entry
+    {seit 2013}
+    {Bachelor of Science{\normalfont ,~Studiengang Informatik}}
+    {Hochschule Mannheim}
+    {\emph{Fokus: Software-Engineering}}
+  \entry
+    {\multirow{2}{2cm}{07/2002 \\ bis 04/2012}}
+    {Allgemeine Hochschulreife {\normalfont }}
+    {Otto-Hahn-Gymnasium Landau}
+    {\emph{Leistungskurse: Musik, Physik, Englisch}}
+\end{entrylist}
+
+\section{Praktische Erfahrungen}
+
+\begin{entrylist}
+  \entry
+    {seit 07/2017}
+    {Werkstudent, Full-Stack-Ninja}
+    {Optisure GmbH, Karlsruhe}
+    {\emph{Versicherungsdokumente mit \LaTeX, Dev-Container mit Docker, Frontend mit React}}
+  \entry
+    {\multirow{2}{2cm}{04/2016 \\ bis 07/2017}}
+    {Werkstudent, Full-Stack-Ninja}
+    {NinjaConcept GmbH, Karlsruhe}
+    {\emph{Backend mit Node \& Meteor, Frontend mit React \& Elm}}
+  \entry
+    {\multirow{2}{2cm}{06/2015 \\ bis 03/2016}}
+    {Praxissemester}
+    {NinjaConcept GmbH, Karlsruhe}
+    {\emph{Backend mit Rails, Frontend mit React}}
+  \entry
+    {\multirow{2}{2cm}{06/2009 \\ bis 04/2012}}
+    {Administration Schülernetzwerk}
+    {Otto-Hahn-Gymnasium, Landau}
+    {\emph{Ausfallsicherheit, Windows Server 2008 R2, Active-Directory, Citrix Xen, pfSense, Planen von WLan-Infrastruktur, Provisionierung Schülerrechner}}
+\end{entrylist}
+
+\section{Projekte}
+
+\begin{entrylist}
+  \entry
+    {2017}
+    {\multirow{2}{9cm}{Virtualisierte Arbeitsumgebung für den Test verteilter Systeme}}
+    {Studienarbeit}
+    {\\\emph{Docker, Kafka, Clojure, Elm}}
+  \entry
+    {2016}
+    {\multirow{2}{8.5cm}{Mental Aktiv Trainingscenter \& Knobelforum{\normalfont ,~www.mental-aktiv.de}}}
+    {NinjaConcept GmbH}
+    {\\\emph{Meteor, React}}
+  \entry
+    {2016}
+    {Null-Leasing Portal{\normalfont ,~www.null-leasing.com}}
+    {NinjaConcept GmbH}
+    {\emph{Node, React, Semantic-Ui}}
+  \entry
+    {2016}
+    {Kymo Onlineshop{\normalfont ,~www.floorwear.de}}
+    {NinjaConcept GmbH}
+    {\emph{Node, Meteor, React, Semantic-Ui}}
+  \entry
+    {2015}
+    {KIT Chemotion ELN{\normalfont ,~eln.chemotion.net}}
+    {NinjaConcept GmbH}
+    {\emph{Rails, React, Bootstrap}}
+  \entry
+    {2012}
+    {\multirow{2}{9cm}{Automatisierte Planung der Bundesjugendspiele mithilfe eines Genetischen Algorithmus}}
+    {\multirow{2}{2cm}{\raggedleft Facharbeit, Jugend-Forscht}}
+    {\\\emph{PHP, Java-Script, CSS, HTML}}
+\end{entrylist}
+
+\vfill
+\begin{flushright}
+{\footnotesize\addfontfeature{Color=lightgray} Stand: \monthandyear{}}
+\end{flushright}
+% \section{publications}
+%
+% Put your publications here!
+
+%%% This piece of code has been commented by Karol Kozioł due to biblatex errors. 
+% 
+%\printbibsection{article}{article in peer-reviewed journal}
+%\begin{refsection}
+%  \nocite{*}
+%  \printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=subbibliography]
+%\end{refsection}
+%\begin{refsection}
+%  \nocite{*}
+%  \printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
+%\end{refsection}
+%\printbibsection{misc}{other publications}
+%\printbibsection{report}{research reports}
+
+\end{document}
