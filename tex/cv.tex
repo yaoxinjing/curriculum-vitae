@@ -15,7 +15,7 @@
 \usepackage{marvosym}
 \usepackage{datetime}
 
-\newdateformat{monthyeardate}{%
+\newdateformat{daymonthyeardate}{%
   \THEDAY. \monthname[\THEMONTH] \THEYEAR}
 
 \begin{document}
@@ -47,7 +47,7 @@
     \progressbar{0.339}
   \section{Interessen}
   funktionale Programmierung
-  reaktive Frontends
+  reaktive Frontends · Usability
   Architektur · API-Design
   Clean-Code · TDD
   Deployment · CI/CD
@@ -59,6 +59,7 @@
   \section{Hobbies}
     englische Romane
     Musikproduktion
+    Drums · Percussion · Piano
 \end{aside}
 
 \section{Ausbildung}
@@ -84,14 +85,15 @@
     {Werkstudent, Full-Stack-Ninja}
     {Optisure GmbH, Karlsruhe}
     {%
-      • agile Entwicklung
+      • agile Entwicklung\\
+      • aktive Zusammenarbeit mit Projektbeteiligten und Stakeholdern
     }
   \entry
     {\multirow{2}{2cm}{04/2016 bis\\ 07/2017}}
     {Werkstudent, Full-Stack-Ninja}
     {NinjaConcept GmbH, Karlsruhe}
     {%
-      • Teilnahme an regelmäßigen Code-Reviews
+      • Teilnahme an Code-Reviews der Feature-Branches
     }
   \entry
     {\multirow{2}{2cm}{06/2015 bis\\ 04/2016}}
@@ -124,7 +126,7 @@
     }
   \entry
     {2017}
-    {\multirow{2}{8cm}{Mitarbeit bei der Entwicklung eines digitalen\\ Versicherungsportals {\normalfont ,~www.optisure.de}}}
+    {\multirow{2}{8cm}{Mitarbeit bei der Entwicklung eines digitalen\\ Versicherungsportals{\normalfont ,~www.optisure.de}}}
     {Optisure GmbH}
     {\\%
       • Personalisierte Dokumente mit \LaTeX{} \& Node\\
@@ -136,9 +138,9 @@
     {\multirow{2}{8cm}{Mitarbeit bei der Entwicklung von Gedächtnis-\\Spielen \& Rewrite eines Rätsel-Forums für Dr. Willmar Schwabe GmbH{\normalfont ,~www.mental-aktiv.de}}}
     {NinjaConcept GmbH}
     {\\\\%
-      • Entwicklung mehrerer Spiele (React)\\
+      • testgetriebene Entwicklung mehrerer Spiele (React)\\
       • selbstständige Planung \& Umsetzung des Forums (React)\\
-      • Backend und Frontend-Integration mit Meteor
+      • Backend- \& Frontend-Integration mit Meteor
     }
   % \entry
   %   {2016}
@@ -158,13 +160,13 @@
       • Controller \& Models in PHP, reaktive Views mit Java-Script
     }
 \end{entrylist}
-\vspace*{-.66cm}
-\hspace*{-.3cm}
-\includegraphics[width=.3\textwidth]{signature.pdf}\\\\
+\vspace*{-.2cm}
+% \hspace*{-.3cm}
+\includegraphics[width=.3\textwidth]{signature.pdf}\\
 {\footnotesize
-  % \addfontfeature{Color=lightgray} 
-  Landau in der Pfalz, \monthyeardate\today
+  Landau in der Pfalz, \daymonthyeardate\today
 }
+
 % \section{publications}
 %
 % Put your publications here!
